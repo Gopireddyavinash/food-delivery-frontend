@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Review your food order, apply discount coupon codes, choose delivery address, and proceed to secure checkout on CraveNest." />
+  <title>Shopping Cart & Checkout | CraveNest</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="CraveNest Home">
+        <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </a>
+
+      <!-- Location Picker Dropdown Button -->
+      <div class="header-location-wrap">
+        <button type="button" class="location-picker" aria-label="Choose delivery location">
+          <i class="fa-solid fa-location-dot loc-pin"></i>
+          <span class="current-location-text">Indiranagar, Bengaluru</span>
+          <i class="fa-solid fa-chevron-down loc-chevron"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Nav Search -->
+      <div class="nav-search-wrap">
+        <form class="global-search-form nav-search-box">
+          <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+          <input type="search" placeholder="Search for restaurants, biryani, pizza..." aria-label="Search food" />
+        </form>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="restaurants.html" class="nav-link">Restaurants</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Cart Button & Mobile Trigger -->
+      <div class="header-actions">
+        <a href="cart.html" class="btn-nav-cart" aria-label="Shopping Cart">
+          <div class="cart-icon-wrap">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count-badge">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: CART & CHECKOUT
+       ========================================================================== -->
+  <main class="section-padding">
+    <div class="container">
+
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumb-nav" style="margin-bottom: 24px;">
+        <a href="index.html">Home</a> &rsaquo; <span>Order Cart</span>
+      </nav>
+
+      <!-- 1. EMPTY CART VIEW -->
+      <div id="cart-empty-view" class="empty-cart-box hidden">
+        <div class="empty-cart-graphic">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h2 class="empty-cart-title">Your Cart is Empty</h2>
+        <p class="empty-cart-lead">
+          You haven't added anything to your cart yet. Explore our top-rated restaurants and satisfy your cravings!
+        </p>
+        <a href="restaurants.html" class="btn btn-primary" style="padding: 12px 32px;">
+          Explore Restaurants <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- 2. FILLED CART VIEW -->
+      <div id="cart-filled-view" class="cart-page-layout">
+        
+        <!-- LEFT COLUMN: Items, Instructions, Address -->
+        <div class="cart-main-col">
+          <!-- Cart Items Card -->
+          <div class="cart-items-card">
+            <div class="cart-rest-header" id="cart-restaurant-name">
+              <i class="fa-solid fa-utensils"></i> Ordering from Restaurant
+            </div>
+
+            <!-- List of line items -->
+            <div id="cart-items-list">
+              <!-- Rendered dynamically by cart-page.js -->
+            </div>
+
+            <!-- Cooking Instructions Input -->
+            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border-subtle);">
+              <label for="cooking-notes" style="font-size: 0.88rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                <i class="fa-regular fa-note-sticky" style="color: var(--primary);"></i> Any cooking suggestions or notes for the chef?
+              </label>
+              <textarea id="cooking-notes" class="form-control" rows="2" placeholder="e.g. Less spicy, keep chutney separate, please include extra cutlery"></textarea>
+            </div>
+          </div>
+
+          <!-- Delivery Address Selector -->
+          <div class="address-selector-section">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 1.15rem; font-weight: 800;"><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Delivery Address</h3>
+              <button type="button" class="btn-view-all" onclick="window.showToast('New address saved to profile 📍', 'success')">+ Add New</button>
+            </div>
+
+            <div class="address-cards-grid">
+              <div class="address-card-option selected" data-address-type="home">
+                <h4><i class="fa-solid fa-house"></i> Home</h4>
+                <p>Flat 402, Green Heights, 12th Main Road, Indiranagar, Bengaluru - 560038</p>
+              </div>
+
+              <div class="address-card-option" data-address-type="work">
+                <h4><i class="fa-solid fa-briefcase"></i> Work</h4>
+                <p>WeWork Galaxy, 43 Residency Road, Shanthala Nagar, Bengaluru - 560025</p>
+              </div>
+
+              <div class="address-card-option" data-address-type="other">
+                <h4><i class="fa-solid fa-heart"></i> Friend's Place</h4>
+                <p>Villa 12, Palm Meadows, Whitefield, Bengaluru - 560066</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Instructions -->
+          <div class="instructions-section">
+            <h3 style="font-size: 1.15rem; font-weight: 800;"><i class="fa-solid fa-motorcycle" style="color: var(--primary);"></i> Delivery Instructions</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">Select instructions for the delivery partner</p>
+            
+            <div class="instruction-chips-list">
+              <button type="button" class="instruction-chip"><i class="fa-solid fa-door-open"></i> Leave at door</button>
+              <button type="button" class="instruction-chip"><i class="fa-solid fa-bell-slash"></i> Avoid ringing bell</button>
+              <button type="button" class="instruction-chip"><i class="fa-solid fa-phone-slash"></i> Don't call</button>
+              <button type="button" class="instruction-chip"><i class="fa-solid fa-user-shield"></i> Leave with security guard</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Bill Summary & Checkout -->
+        <div class="cart-sidebar-col">
+          <div class="cart-sidebar-card">
+            <h3 class="bill-card-title">Order Summary</h3>
+
+            <!-- Apply Coupon Form -->
+            <div class="coupon-box">
+              <label for="coupon-input" style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);"><i class="fa-solid fa-tag" style="color: var(--primary);"></i> Have a Promo Code?</label>
+              <form id="coupon-apply-form" class="coupon-input-group">
+                <input type="text" id="coupon-input" placeholder="e.g. CRAVE50" aria-label="Coupon voucher code" />
+                <button type="submit" class="btn-apply-code">APPLY</button>
+              </form>
+
+              <!-- Quick available coupons -->
+              <div class="quick-coupons-wrap" id="quick-coupons-list">
+                <!-- Rendered by cart-page.js -->
+              </div>
+            </div>
+
+            <!-- Tip Delivery Partner -->
+            <div class="tip-selector-wrap">
+              <label style="font-size: 0.88rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: space-between;">
+                <span><i class="fa-solid fa-hand-holding-heart" style="color: var(--primary);"></i> Tip your delivery partner</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">100% goes to rider</span>
+              </label>
+              <div class="tip-chips-row" id="cart-tip-container">
+                <button type="button" class="tip-chip" data-tip="20">₹20</button>
+                <button type="button" class="tip-chip" data-tip="30">₹30</button>
+                <button type="button" class="tip-chip" data-tip="50">₹50</button>
+                <button type="button" class="tip-chip active" data-tip="0">Clear</button>
+              </div>
+            </div>
+
+            <!-- Detailed Price Breakdown -->
+            <div id="cart-bill-details">
+              <!-- Rendered by cart-page.js -->
+            </div>
+
+            <!-- Cancellation Policy Note -->
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 16px; line-height: 1.4;">
+              <i class="fa-solid fa-shield-halved"></i> 100% cancellation refund eligible if cancelled within 60 seconds of confirmation.
+            </div>
+
+            <!-- Proceed to Pay Primary Button -->
+            <button type="button" class="btn-proceed-pay" id="btn-proceed-checkout">
+              <span>PROCEED TO PAY</span>
+              <span id="btn-checkout-total">₹0</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MOBILE OFF-CANVAS DRAWER
+       ========================================================================== -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close drawer">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="restaurants.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> Restaurants</a></li>
+        <li><a href="menu.html" class="mobile-nav-link"><i class="fa-solid fa-utensils"></i> Menu</a></li>
+        <li><a href="cart.html" class="mobile-nav-link active"><i class="fa-solid fa-bag-shopping"></i> My Cart</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-headset"></i> Help & Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Delivery Location:</p>
+      <button type="button" class="location-picker" style="width: 100%; justify-content: space-between;">
+        <span class="current-location-text">Indiranagar, Bengaluru</span>
+        <i class="fa-solid fa-chevron-down loc-chevron"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="restaurants.html" class="bottom-nav-item">
+        <i class="fa-solid fa-compass"></i>
+        <span>Explore</span>
+      </a>
+      <a href="menu.html" class="bottom-nav-item">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Menu</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item active">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count-badge">0</span>
+        <span>Cart</span>
+      </a>
+      <a href="contact.html" class="bottom-nav-item">
+        <i class="fa-solid fa-headset"></i>
+        <span>Help</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       LOCATION SELECTOR MODAL
+       ========================================================================== -->
+  <div class="modal-wrapper location-modal" id="location-select-modal">
+    <div class="modal-backdrop location-modal-overlay"></div>
+    <div class="modal-dialog" style="padding: 28px;">
+      <button type="button" class="modal-close-icon close-loc-modal" aria-label="Close dialog">&times;</button>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;">Select Delivery Location</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Choose your delivery address to view nearby kitchens</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" class="location-item-option" data-location="Indiranagar, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Indiranagar</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">100ft Road, Stage 2</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Koramangala, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Koramangala</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">5th Block, Near Jyoti Nivas College</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="HSR Layout, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>HSR Layout</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Sector 3, 27th Main</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Whitefield, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Whitefield</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Inner Circle, ITPL Main Road</span></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+          </a>
+          <p>Delivering exceptional handcrafted dining experiences from top kitchens straight to your doorstep.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="about.html">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Top Cuisines</h4>
+          <ul class="footer-links-list">
+            <li><a href="restaurants.html?search=biryani">Hyderabadi Biryani</a></li>
+            <li><a href="restaurants.html?search=pizza">Woodfired Pizza</a></li>
+            <li><a href="restaurants.html?search=burger">Smash Burgers</a></li>
+            <li><a href="restaurants.html?veg=1">Pure Vegetarian</a></li>
+            <li><a href="restaurants.html?search=desserts">Pastries & Shakes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Stay in the Loop</h4>
+          <p>Subscribe to unlock exclusive weekly promo vouchers and secret chef drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Thank you for subscribing to CraveNest!', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 CraveNest Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart-page.js"></script>
+</body>
+</html>
+

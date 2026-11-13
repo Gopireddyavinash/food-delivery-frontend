@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the CraveNest story. Learn how our technology connects passionate chefs and food lovers with lightning-fast, hygiene-certified delivery." />
+  <title>About Us | CraveNest</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="CraveNest Home">
+        <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </a>
+
+      <!-- Location Picker Dropdown Button -->
+      <div class="header-location-wrap">
+        <button type="button" class="location-picker" aria-label="Choose delivery location">
+          <i class="fa-solid fa-location-dot loc-pin"></i>
+          <span class="current-location-text">Indiranagar, Bengaluru</span>
+          <i class="fa-solid fa-chevron-down loc-chevron"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Nav Search -->
+      <div class="nav-search-wrap">
+        <form class="global-search-form nav-search-box">
+          <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+          <input type="search" placeholder="Search for restaurants, biryani, pizza..." aria-label="Search food" />
+        </form>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="restaurants.html" class="nav-link">Restaurants</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Cart Button & Mobile Trigger -->
+      <div class="header-actions">
+        <a href="cart.html" class="btn-nav-cart" aria-label="Shopping Cart">
+          <div class="cart-icon-wrap">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count-badge">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: ABOUT US
+       ========================================================================== -->
+  <main class="section-padding">
+    <div class="container">
+      
+      <!-- ABOUT HERO -->
+      <section class="about-hero">
+        <div class="hero-badge-pill" style="margin: 0 auto 16px;">
+          <i class="fa-solid fa-heart" style="color: var(--accent-red);"></i> Handcrafted With Culinary Passion
+        </div>
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 16px;">
+          Elevating How the World <span class="gradient-text">Experiences Food</span>
+        </h1>
+        <p class="hero-lead" style="margin: 0 auto;">
+          Founded in Bengaluru, CraveNest was built on a simple conviction: you should never have to compromise between five-star restaurant quality and the convenience of instant delivery.
+        </p>
+      </section>
+
+      <!-- STATS COUNTER -->
+      <section class="about-stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">500k+</div>
+          <div class="stat-label">Happy Food Lovers Served</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1,500+</div>
+          <div class="stat-label">Vetted Culinary Partners</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">22 min</div>
+          <div class="stat-label">Average Delivery Dispatch</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">99.8%</div>
+          <div class="stat-label">On-Time Hygiene Compliance</div>
+        </div>
+      </section>
+
+      <!-- STORY NARRATIVE & VISUAL -->
+      <section class="section-padding" style="padding-top: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;" class="hero-grid">
+          <div>
+            <span style="color: var(--primary); font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">Our Journey</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; margin: 10px 0 18px; line-height: 1.25;">
+              From a single kitchen concept to an artisanal food movement.
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 16px;">
+              Back in 2023, our founders were frustrated with lukewarm takeaways, wilted salads, and excessive packaging waste. We envisioned a food tech platform engineered around food freshness instead of mere logistics.
+            </p>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 24px;">
+              Today, CraveNest equips chef-partners with proprietary smart dispatch algorithms that synchronize kitchen prep with rider arrival down to the second. Your hand-tossed pizza leaves the 900-degree stone oven right when the insulated thermal carrier is ready.
+            </p>
+            <a href="restaurants.html" class="btn btn-primary">Taste the CraveNest Difference</a>
+          </div>
+
+          <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl);">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Kitchen craftsmanship" style="width: 100%; height: 420px; object-fit: cover;" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CORE VALUES -->
+      <section class="section-padding">
+        <div class="section-header" style="text-align: center; justify-content: center; margin-bottom: 40px;">
+          <div>
+            <h2 class="section-title">The CraveNest Quality Code</h2>
+            <p class="section-subtitle">The four non-negotiable promises behind every single bite</p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h3 class="value-title">Farm-to-Fork Purity</h3>
+            <p class="value-desc">We partner exclusively with kitchens that source fresh, ethically harvested local produce and clean cold-pressed oils.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+            <h3 class="value-title">Thermal Freshness Lock</h3>
+            <p class="value-desc">Custom aerogel-insulated thermal delivery bags ensure hot curries remain bubbling and ice creams never melt en route.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3 class="value-title">100% Eco Packaging</h3>
+            <p class="value-desc">Over 94% of our packaging is biodegradable bagasse, recycled cardboard, and compostable cornstarch cutlery.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3 class="value-title">Fair Chef Partnerships</h3>
+            <p class="value-desc">Unlike predatory aggregator apps, we empower independent culinary masters with transparent, chef-first commission tiers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEADERSHIP TEAM -->
+      <section class="section-padding" style="background: #FFFFFF; border-radius: var(--radius-xl); padding: 48px 36px; border: 1px solid var(--border-subtle); margin-bottom: 40px;">
+        <div class="section-header" style="text-align: center; justify-content: center; margin-bottom: 40px;">
+          <div>
+            <h2 class="section-title">Meet the Culinary Dreamers</h2>
+            <p class="section-subtitle">The visionary chefs, engineers, and flavor curators behind CraveNest</p>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80" alt="Chef Vikramaditya" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Chef Vikramaditya Sen</h3>
+              <p class="team-role">Chief Culinary Director</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80" alt="Aishwarya Rao" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Aishwarya Rao</h3>
+              <p class="team-role">Head of Product & Experience</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80" alt="Dr. Neha Kapoor" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Neha Kapoor</h3>
+              <p class="team-role">Director of Food Safety & Nutrition</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" alt="Karthik Narayan" />
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Karthik Narayan</h3>
+              <p class="team-role">VP of Logistics & AI Dispatch</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MOBILE OFF-CANVAS DRAWER
+       ========================================================================== -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close drawer">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="restaurants.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> Restaurants</a></li>
+        <li><a href="menu.html" class="mobile-nav-link"><i class="fa-solid fa-utensils"></i> Menu</a></li>
+        <li><a href="cart.html" class="mobile-nav-link"><i class="fa-solid fa-bag-shopping"></i> My Cart</a></li>
+        <li><a href="about.html" class="mobile-nav-link active"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-headset"></i> Help & Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Delivery Location:</p>
+      <button type="button" class="location-picker" style="width: 100%; justify-content: space-between;">
+        <span class="current-location-text">Indiranagar, Bengaluru</span>
+        <i class="fa-solid fa-chevron-down loc-chevron"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="restaurants.html" class="bottom-nav-item">
+        <i class="fa-solid fa-compass"></i>
+        <span>Explore</span>
+      </a>
+      <a href="menu.html" class="bottom-nav-item">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Menu</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count-badge">0</span>
+        <span>Cart</span>
+      </a>
+      <a href="contact.html" class="bottom-nav-item">
+        <i class="fa-solid fa-headset"></i>
+        <span>Help</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       LOCATION SELECTOR MODAL
+       ========================================================================== -->
+  <div class="modal-wrapper location-modal" id="location-select-modal">
+    <div class="modal-backdrop location-modal-overlay"></div>
+    <div class="modal-dialog" style="padding: 28px;">
+      <button type="button" class="modal-close-icon close-loc-modal" aria-label="Close dialog">&times;</button>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;">Select Delivery Location</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Choose your delivery address to view nearby kitchens</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" class="location-item-option" data-location="Indiranagar, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Indiranagar</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">100ft Road, Stage 2</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Koramangala, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Koramangala</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">5th Block, Near Jyoti Nivas College</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="HSR Layout, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>HSR Layout</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Sector 3, 27th Main</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Whitefield, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Whitefield</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Inner Circle, ITPL Main Road</span></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+          </a>
+          <p>Delivering exceptional handcrafted dining experiences from top kitchens straight to your doorstep.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="about.html">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Top Cuisines</h4>
+          <ul class="footer-links-list">
+            <li><a href="restaurants.html?search=biryani">Hyderabadi Biryani</a></li>
+            <li><a href="restaurants.html?search=pizza">Woodfired Pizza</a></li>
+            <li><a href="restaurants.html?search=burger">Smash Burgers</a></li>
+            <li><a href="restaurants.html?veg=1">Pure Vegetarian</a></li>
+            <li><a href="restaurants.html?search=desserts">Pastries & Shakes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Stay in the Loop</h4>
+          <p>Subscribe to unlock exclusive weekly promo vouchers and secret chef drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Thank you for subscribing to CraveNest!', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 CraveNest Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

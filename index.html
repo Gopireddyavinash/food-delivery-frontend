@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CraveNest - Handcrafted gourmet food delivered hot to your doorstep in 30 minutes or less. Explore top restaurants, biryanis, pizzas, and healthy bowls." />
+  <title>CraveNest | Handcrafted Food Delivered Fast</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="CraveNest Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-fire-burner"></i>
+        </div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </a>
+
+      <!-- Location Picker Dropdown Button -->
+      <div class="header-location-wrap">
+        <button type="button" class="location-picker" aria-label="Choose delivery location">
+          <i class="fa-solid fa-location-dot loc-pin"></i>
+          <span class="current-location-text">Indiranagar, Bengaluru</span>
+          <i class="fa-solid fa-chevron-down loc-chevron"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Nav Search -->
+      <div class="nav-search-wrap">
+        <form class="global-search-form nav-search-box">
+          <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+          <input type="search" placeholder="Search for restaurants, biryani, pizza..." aria-label="Search food" />
+        </form>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="restaurants.html" class="nav-link">Restaurants</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Cart Button & Mobile Trigger -->
+      <div class="header-actions">
+        <a href="cart.html" class="btn-nav-cart" aria-label="Shopping Cart">
+          <div class="cart-icon-wrap">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count-badge">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge-pill">
+            <i class="fa-solid fa-bolt"></i> 30-Min Fast Delivery Guaranteed
+          </div>
+          <h1 class="hero-title">
+            Flavors That Ignite Your <span class="gradient-text">Cravings</span>
+          </h1>
+          <p class="hero-lead">
+            Discover top-rated culinary masterminds, artisanal cloud kitchens, and beloved street legends. Hot, fresh, and delivered at blazing speed.
+          </p>
+
+          <!-- Search Input Form -->
+          <div class="hero-search-container">
+            <form class="hero-search-form" id="hero-search-form">
+              <div class="hero-input-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Enter dish or restaurant name..." aria-label="Search food or restaurant" />
+              </div>
+              <button type="submit" class="hero-search-btn">
+                Find Food
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Search Tags -->
+          <div class="hero-quick-tags">
+            <span>Trending:</span>
+            <a href="restaurants.html?search=biryani" class="quick-tag">Biryani</a>
+            <a href="restaurants.html?search=pizza" class="quick-tag">Woodfired Pizza</a>
+            <a href="restaurants.html?search=burger" class="quick-tag">Smash Burgers</a>
+            <a href="restaurants.html?veg=1" class="quick-tag">Pure Veg</a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media & Floating Elements -->
+        <div class="hero-media-wrap">
+          <div class="hero-main-img-box">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Delicious Feast" />
+          </div>
+
+          <!-- Floating Badge 1 -->
+          <div class="hero-floating-card-1">
+            <div class="floating-icon-orange">
+              <i class="fa-solid fa-motorcycle"></i>
+            </div>
+            <div class="floating-meta">
+              <strong>Super Fast</strong>
+              <span>Avg. 22 mins</span>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2 -->
+          <div class="hero-floating-card-2">
+            <div class="floating-icon-green">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="floating-meta">
+              <strong>4.8 ★ Rated</strong>
+              <span>500k+ Happy Foodies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- "WHAT'S ON YOUR MIND?" CATEGORIES CAROUSEL -->
+    <section class="section-padding category-carousel-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">What's on your mind?</h2>
+            <p class="section-subtitle">Explore dishes crafted to satisfy every mood</p>
+          </div>
+          <a href="menu.html" class="btn-view-all">Explore All Cuisines <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="categories-scroll-wrapper" id="categories-container">
+          <!-- Dynamically populated by home.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP RESTAURANT CHAINS -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Top Restaurant Chains in Bengaluru</h2>
+            <p class="section-subtitle">Handpicked culinary royalty with the highest hygiene and quality ratings</p>
+          </div>
+          <a href="restaurants.html" class="btn-view-all">View All Restaurants <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="restaurant-grid" id="featured-restaurants-grid">
+          <!-- Populated by home.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOTIONAL VOUCHER BANNER -->
+    <section class="container" style="margin-bottom: 40px;">
+      <div style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); border-radius: var(--radius-xl); padding: 36px 40px; color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 24px; box-shadow: var(--shadow-lg);">
+        <div>
+          <span style="background: var(--primary-gradient); color: #fff; font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: var(--radius-pill); text-transform: uppercase;">Special Weekend Treat</span>
+          <h3 style="font-size: 1.8rem; font-weight: 800; margin: 10px 0 6px;">Craving a feast? Get 50% OFF</h3>
+          <p style="color: #94A3B8; font-size: 0.95rem;">Use promo code <strong style="color: var(--primary); font-size: 1.1rem; letter-spacing: 0.05em;">CRAVE50</strong> at checkout on your favorite restaurants.</p>
+        </div>
+        <a href="restaurants.html" class="btn btn-primary" style="padding: 12px 28px;">Claim Offer Now</a>
+      </div>
+    </section>
+
+    <!-- POPULAR DISHES NEAR YOU -->
+    <section class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Popular Dishes Near You</h2>
+            <p class="section-subtitle">Most ordered delicacies with 1-click instant cart addition</p>
+          </div>
+          <a href="menu.html" class="btn-view-all">Browse Full Menu <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="food-grid" id="popular-dishes-grid">
+          <!-- Populated by home.js with steppers -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CRAVENEST (VALUE PROPOSITIONS) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header" style="text-align: center; justify-content: center; margin-bottom: 48px;">
+          <div>
+            <h2 class="section-title">Why Foodies Love CraveNest</h2>
+            <p class="section-subtitle">Setting new standards in modern culinary delivery</p>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+            <h3 class="value-title">Lightning Fast Delivery</h3>
+            <p class="value-desc">Smart GPS-dispatched drivers pick up orders right as the chef plates them, keeping your food piping hot.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="value-title">100% Hygiene Certified</h3>
+            <p class="value-desc">Every restaurant partner undergoes mandatory bi-weekly 40-point hygiene and safety audits.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3 class="value-title">Live Real-Time Tracking</h3>
+            <p class="value-desc">Watch every milestone live from kitchen prep, rider arrival, to your doorstep with live countdowns.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-tags"></i></div>
+            <h3 class="value-title">Unbeatable Savings</h3>
+            <p class="value-desc">Enjoy daily coupon codes, free delivery on orders above ₹499, and zero hidden platform surcharges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / SOCIAL PROOF -->
+    <section class="section-padding" style="background: #F1F5F9;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Loved by Thousands</h2>
+            <p class="section-subtitle">Real experiences from foodies in your neighborhood</p>
+          </div>
+        </div>
+
+        <div class="restaurant-grid" id="testimonials-grid">
+          <!-- Populated by home.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MOBILE OFF-CANVAS DRAWER
+       ========================================================================== -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close drawer">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="restaurants.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> Restaurants</a></li>
+        <li><a href="menu.html" class="mobile-nav-link"><i class="fa-solid fa-utensils"></i> Menu</a></li>
+        <li><a href="cart.html" class="mobile-nav-link"><i class="fa-solid fa-bag-shopping"></i> My Cart</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-headset"></i> Help & Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Delivery Location:</p>
+      <button type="button" class="location-picker" style="width: 100%; justify-content: space-between;">
+        <span class="current-location-text">Indiranagar, Bengaluru</span>
+        <i class="fa-solid fa-chevron-down loc-chevron"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile bottom shortcut navigation">
+    <div class="bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="restaurants.html" class="bottom-nav-item">
+        <i class="fa-solid fa-compass"></i>
+        <span>Explore</span>
+      </a>
+      <a href="menu.html" class="bottom-nav-item">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Menu</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-count-badge">0</span>
+        <span>Cart</span>
+      </a>
+      <a href="contact.html" class="bottom-nav-item">
+        <i class="fa-solid fa-headset"></i>
+        <span>Help</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       LOCATION SELECTOR MODAL
+       ========================================================================== -->
+  <div class="modal-wrapper location-modal" id="location-select-modal">
+    <div class="modal-backdrop location-modal-overlay"></div>
+    <div class="modal-dialog" style="padding: 28px;">
+      <button type="button" class="modal-close-icon close-loc-modal" aria-label="Close dialog">&times;</button>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;">Select Delivery Location</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Choose your delivery address to view nearby kitchens</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" class="location-item-option" data-location="Indiranagar, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Indiranagar</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">100ft Road, Stage 2</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Koramangala, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Koramangala</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">5th Block, Near Jyoti Nivas College</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="HSR Layout, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>HSR Layout</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Sector 3, 27th Main</span></div>
+        </button>
+
+        <button type="button" class="location-item-option" data-location="Whitefield, Bengaluru" style="padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 12px; text-align: left; background: #F8FAFC;">
+          <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
+          <div><strong>Whitefield</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Inner Circle, ITPL Main Road</span></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <span class="brand-name">Crave<span class="brand-accent">Nest</span></span>
+          </a>
+          <p>Delivering exceptional handcrafted dining experiences from top kitchens straight to your doorstep.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="about.html">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Top Cuisines</h4>
+          <ul class="footer-links-list">
+            <li><a href="restaurants.html?search=biryani">Hyderabadi Biryani</a></li>
+            <li><a href="restaurants.html?search=pizza">Woodfired Pizza</a></li>
+            <li><a href="restaurants.html?search=burger">Smash Burgers</a></li>
+            <li><a href="restaurants.html?veg=1">Pure Vegetarian</a></li>
+            <li><a href="restaurants.html?search=desserts">Pastries & Shakes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Stay in the Loop</h4>
+          <p>Subscribe to unlock exclusive weekly promo vouchers and secret chef drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); window.showToast('Thank you for subscribing to CraveNest!', 'success'); this.reset();">
+            <input type="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 CraveNest Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
+
